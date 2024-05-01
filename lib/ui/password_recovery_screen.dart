@@ -17,7 +17,7 @@ class PasswordRecoveryScreen extends StatelessWidget {
               style: TextStyle(fontSize: 24.0),
             ),
             SizedBox(height: 20.0),
-            // Aquí puedes agregar campos de entrada y botones para recuperar la contraseña
+
           ],
         ),
       ),

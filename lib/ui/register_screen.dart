@@ -53,7 +53,6 @@ class RegisterScreen extends StatelessWidget {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Acción a realizar cuando se presione el botón de registro
               },
               child: Text('Registrarse'),
             ),
