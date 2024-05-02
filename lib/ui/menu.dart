@@ -83,12 +83,12 @@ class myDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text('Iniciar Sesion'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => LoginScreen()),
-              );
-            },
+            //onTap: () {
+              //Navigator.push(
+                //context,
+                //MaterialPageRoute(builder: (context) => LoginScreen()),
+              //);
+            //},
           ),
         ],
       ),

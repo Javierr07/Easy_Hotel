@@ -5,6 +5,10 @@ import 'package:easy_hotel/ui/register_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../blocs/auth_bloc.dart';
+import '../events/auth_event.dart';
+import '../events/navigation_event.dart';
 import '../utils/constants.dart';
 import 'home_screen.dart';
 
@@ -19,6 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     // Aquí construyes la interfaz de usuario utilizando widgets de Flutter
+    final TextEditingController usernameController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
       backgroundColor: Constants.getColor('verde'),
@@ -56,13 +62,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.grey.withOpacity(0.5),
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: Offset(0, 10), // Cambiar el valor de '3' para ajustar el desplazamiento en Y
+                    offset: Offset(0, 10),
                   ),
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.5),
                     spreadRadius: 5,
                     blurRadius: 7,
-                    offset: Offset(10, 0), // Cambiar el valor de '3' para ajustar el desplazamiento en X
+                    offset: Offset(10, 0),
                   ),
                 ],
               ),
@@ -77,6 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     width: 300,
                     child: TextField(
+                      controller: usernameController,
                       decoration: InputDecoration(
                         labelText: 'Usuario',
                         filled: true,
@@ -99,6 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: TextField(
+                      controller: passwordController,
                       decoration: InputDecoration(
                         fillColor: Colors.transparent,
                         labelText: 'Contraseña',
@@ -144,11 +152,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: TextButton(
                       onPressed: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        // Obtener el valor del campo de entrada de usuario y contrase;a
+                        String username = usernameController.text;
+                        String password = passwordController.text;
+
+                        // Enviar el evento SignInWithEmailAndPassword al AuthBloc
+                        BlocProvider.of<AuthBloc>(context).add(
+                          SignInWithEmailAndPassword(email: username, password: password),
                         );
-                        // Acción a realizar cuando se presione el botón
+
                       },
                       child: Text(
                         'Acceder',
