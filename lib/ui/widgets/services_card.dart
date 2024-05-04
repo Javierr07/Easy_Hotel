@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ServiceCard extends StatelessWidget {
@@ -7,6 +6,7 @@ class ServiceCard extends StatelessWidget {
   final IconData icon;
 
   const ServiceCard({
+    super.key,
     required this.name,
     required this.description,
     required this.icon,
@@ -20,7 +20,7 @@ class ServiceCard extends StatelessWidget {
         leading: Icon(icon),
         title: Text(
           name,
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
         ),
         subtitle: Text(description),
       ),

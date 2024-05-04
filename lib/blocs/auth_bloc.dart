@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:meta/meta.dart';
 
 import '../events/auth_event.dart';
 import '../events/navigation_event.dart';
@@ -25,13 +24,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final List<User> users = [
     User(username: 'user', password: 'pass'),
     User(username: 'usuario2@example.com', password: 'contraseña2'),
-    // Puedes agregar más usuarios aquí según sea necesario
   ];
 
   @override
   Stream<AuthState> mapEventToState(AuthEvent event) async* {
     if (event is SignInWithEmailAndPassword) {
-      // Lógica de autenticación...
+      // Lógica de autenticación
       if (isValidCredentials(event.email, event.password, users)) {
         yield AuthenticatedState();
         navigatorBloc.add(NavigateToHomeScreen());
@@ -42,7 +40,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }
 }
 
-  // Método para validar las credenciales (ejemplo)
+// Método para validar las credenciales
 bool isValidCredentials(String email, String password, List<User> users) {
   for (var user in users) {
     if (user.username == email && user.password == password) {
@@ -51,7 +49,6 @@ bool isValidCredentials(String email, String password, List<User> users) {
   }
   return false;
 }
-
 
 // Clase de usuario
 class User {

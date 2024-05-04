@@ -6,16 +6,16 @@ import 'package:easy_hotel/ui/profile_screen.dart';
 import 'package:easy_hotel/ui/standar_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'login_screen.dart';
-
 class myDrawer extends StatelessWidget {
+  const myDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
@@ -28,66 +28,66 @@ class myDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: Text('Inicio'),
+            title: const Text('Inicio'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
               );
             },
           ),
           ListTile(
-            title: Text('Hoteles Economicos'),
+            title: const Text('Hoteles Economicos'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => EconomicScreen()),
+                MaterialPageRoute(builder: (context) => const EconomicScreen()),
               );
             },
           ),
           ListTile(
-            title: Text('Hoteles Estandar'),
+            title: const Text('Hoteles Estandar'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => StandarScreen()),
+                MaterialPageRoute(builder: (context) => const StandarScreen()),
               );
             },
           ),
           ListTile(
-            title: Text('Hoteles de Lujo'),
+            title: const Text('Hoteles de Lujo'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => LuxuryScreen()),
+                MaterialPageRoute(builder: (context) => const LuxuryScreen()),
               );
             },
           ),
           ListTile(
-            title: Text('Sobre Nosostros'),
+            title: const Text('Sobre Nosostros'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AboutUsScreen()),
+                MaterialPageRoute(builder: (context) => const AboutUsScreen()),
               );
             },
           ),
           ListTile(
-            title: Text('Perfil'),
+            title: const Text('Perfil'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProfileScreen()),
+                MaterialPageRoute(builder: (context) => const ProfileScreen()),
               );
             },
           ),
-          ListTile(
+          const ListTile(
             title: Text('Iniciar Sesion'),
             //onTap: () {
-              //Navigator.push(
-                //context,
-                //MaterialPageRoute(builder: (context) => LoginScreen()),
-              //);
+            //Navigator.push(
+            //context,
+            //MaterialPageRoute(builder: (context) => LoginScreen()),
+            //);
             //},
           ),
         ],

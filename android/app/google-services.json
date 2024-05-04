@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816581674914",
+    "project_id": "easyhotel-9f8f5",
+    "storage_bucket": "easyhotel-9f8f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816581674914:android:5f3224e0f9232398f954fb",
+        "android_client_info": {
+          "package_name": "com.example.easy_hotel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCHTWYaKxh07vpp3olydxGLCzBPCV3bBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

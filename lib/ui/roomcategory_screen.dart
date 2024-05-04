@@ -1,5 +1,4 @@
 import 'package:easy_hotel/ui/widgets/room_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../blocs/data.dart';
@@ -11,8 +10,8 @@ class RoomCategoryPage extends StatelessWidget {
   const RoomCategoryPage({
     required this.category,
     required this.rooms,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

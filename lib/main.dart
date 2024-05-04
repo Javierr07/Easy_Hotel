@@ -1,5 +1,4 @@
 import 'package:easy_hotel/ui/home_screen.dart';
-import 'package:easy_hotel/ui/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,12 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Easy Hotel',
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue
-      ),
+      theme: ThemeData(primarySwatch: Colors.lightBlue),
       home: BlocProvider(
         create: (context) => AuthBloc(context, NavigatorBloc(context)),
-        child: LoginScreen(), // Inicia con la pantalla de inicio de sesión
+        child: const HomeScreen(), // Inicia con la pantalla de inicio de sesión
       ),
     );
   }

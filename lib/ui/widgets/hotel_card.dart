@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HotelCard extends StatelessWidget {
@@ -6,6 +5,7 @@ class HotelCard extends StatelessWidget {
   final String imageUrl;
 
   const HotelCard({
+    super.key,
     required this.name,
     required this.imageUrl,
   });
@@ -24,10 +24,11 @@ class HotelCard extends StatelessWidget {
             height: 200.0,
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Text(
               name,
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              style:
+                  const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
           ),
         ],

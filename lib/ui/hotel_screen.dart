@@ -1,24 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../blocs/data.dart';
 
 class HotelScreen extends StatelessWidget {
-  // Lista de hoteles de ejemplo
+  const HotelScreen({super.key});
 
+  // Lista de hoteles de ejemplo
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hotel'),
+        title: const Text('Hotel'),
       ),
       body: Column(
         children: [
           Container(
             height: 100, // Altura del banner
-            color: Color.fromARGB(255, 112, 191, 255), //
-            child: Center(
+            color: const Color.fromARGB(255, 112, 191, 255), //
+            child: const Center(
               child: Text(
                 'Nombre o banner del hotel',
                 style: TextStyle(
@@ -48,7 +48,7 @@ class HotelScreen extends StatelessWidget {
                           onPressed: () {
                             // Acción al presionar el botón de reservar
                           },
-                          child: Text('Reservar'),
+                          child: const Text('Reservar'),
                         ),
                       ),
                     ],
