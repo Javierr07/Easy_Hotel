@@ -18,7 +18,7 @@ class myDrawer extends StatelessWidget {
         children: <Widget>[
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Color.fromARGB(255, 68, 139, 197),
             ),
             child: Text(
               'EasyHotel Menu',

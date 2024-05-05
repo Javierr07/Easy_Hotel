@@ -16,12 +16,12 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    // Aquí construyes la interfaz de usuario utilizando widgets de Flutter
+
     final TextEditingController usernameController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
-      backgroundColor: Constants.getColor('verde'),
+      backgroundColor: Colors.white10,
       body: SingleChildScrollView(
         child: Column(
           children: [

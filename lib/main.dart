@@ -17,8 +17,7 @@ fetchRoomData();
 fetchRoomData1();
 fetchRoomData2();
 fetchSPData();
-fetchData();
-   
+fetchData();  
 }
 
 
