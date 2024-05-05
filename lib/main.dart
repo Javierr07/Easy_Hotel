@@ -1,7 +1,7 @@
 import 'package:easy_hotel/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'blocs/auth_bloc.dart';
 import 'blocs/navigation_bloc.dart';
 
