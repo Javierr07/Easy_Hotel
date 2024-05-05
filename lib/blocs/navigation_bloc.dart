@@ -11,8 +11,7 @@ class NavigatorBloc extends Bloc<NavigationEvent, dynamic> {
   @override
   Stream<dynamic> mapEventToState(NavigationEvent event) async* {
     if (event is NavigateToHomeScreen) {
-      // Aquí manejas la navegación a HomeScreen
-      // Por ejemplo:
+      
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const HomeScreen()));
     }

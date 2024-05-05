@@ -16,11 +16,11 @@ class HotelScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 100, // Altura del banner
+            height: 100, 
             color: const Color.fromARGB(255, 112, 191, 255), //
             child: const Center(
               child: Text(
-                'Nombre o banner del hotel',
+                'HABITACIONES',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
