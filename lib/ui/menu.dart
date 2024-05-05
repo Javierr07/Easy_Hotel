@@ -1,6 +1,7 @@
 import 'package:easy_hotel/ui/aboutus_screen.dart';
 import 'package:easy_hotel/ui/economic_screen.dart';
 import 'package:easy_hotel/ui/home_screen.dart';
+import 'package:easy_hotel/ui/login_screen.dart';
 import 'package:easy_hotel/ui/luxury_screen.dart';
 import 'package:easy_hotel/ui/profile_screen.dart';
 import 'package:easy_hotel/ui/standar_screen.dart';
@@ -20,7 +21,7 @@ class myDrawer extends StatelessWidget {
               color: Colors.blue,
             ),
             child: Text(
-              'Menú lateral',
+              'EasyHotel Menu',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
@@ -81,14 +82,14 @@ class myDrawer extends StatelessWidget {
               );
             },
           ),
-          const ListTile(
-            title: Text('Iniciar Sesion'),
-            //onTap: () {
-            //Navigator.push(
-            //context,
-            //MaterialPageRoute(builder: (context) => LoginScreen()),
-            //);
-            //},
+          ListTile(
+            title: const Text('Iniciar Sesion'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginScreen()),
+              );
+            },
           ),
         ],
       ),

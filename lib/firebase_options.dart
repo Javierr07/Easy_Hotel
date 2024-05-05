@@ -66,10 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyC0wN-XOpWaqf9El5NEdPnnjySdvV3NOV4',
-    appId: '1:816581674914:ios:b56387329c7062cef954fb',
+    appId: '1:816581674914:ios:c9a5aafc2a1f2c9cf954fb',
     messagingSenderId: '816581674914',
     projectId: 'easyhotel-9f8f5',
     storageBucket: 'easyhotel-9f8f5.appspot.com',
-    iosBundleId: '1',
+    iosBundleId: 'com.grupo1.easyhotel',
   );
+
 }

@@ -17,7 +17,7 @@ class HotelCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
+          Image.network(
             imageUrl,
             fit: BoxFit.cover,
             width: double.infinity,

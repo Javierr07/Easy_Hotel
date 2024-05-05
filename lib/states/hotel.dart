@@ -3,5 +3,5 @@ class Hotel {
   final String description;
   final String imageUrl;
 
-  Hotel({required this.title, required this.description, required this.imageUrl});
+  Hotel({required this.title, required this.description, required this.imageUrl, required roomCard});
 }

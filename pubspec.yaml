@@ -46,6 +46,7 @@ dependencies:
   meta: any
   firebase_auth: ^4.19.4
   cloud_firestore: ^4.17.2
+  firebase_core: ^2.30.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
