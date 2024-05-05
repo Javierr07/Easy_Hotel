@@ -28,11 +28,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       title: 'Easy Hotel',
       theme: ThemeData(primarySwatch: Colors.lightBlue),
       home: BlocProvider(
-        create: (context) => AuthBloc(context, NavigatorBloc(context)),
+        create: (context) => AuthBloc(NavigatorBloc(context)),
         child: const HomeScreen(), 
       ),
     );
